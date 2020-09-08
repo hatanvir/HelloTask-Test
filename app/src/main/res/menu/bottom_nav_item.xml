@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Calendar"
+        android:icon="@drawable/ic_iconly_light_calendar"
+        android:id="@+id/calendar"
+        />
+    <item
+        android:title="Document"
+        android:icon="@drawable/ic_iconly_light_document"
+        android:id="@+id/document"
+        />
+    <item
+        android:title="fake"
+        android:icon="@drawable/transparent_icon"
+        android:id="@+id/fake"
+        />
+    <item
+        android:title="Favorite"
+        android:icon="@drawable/ic_iconly_light_heart"
+        android:id="@+id/favorite"
+        />
+    <item
+        android:title="Settings"
+        android:icon="@drawable/ic_iconly_light_setting"
+        android:id="@+id/Settings"
+        />
+</menu>
