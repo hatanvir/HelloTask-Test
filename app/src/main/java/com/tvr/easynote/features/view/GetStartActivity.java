@@ -1,4 +1,4 @@
-package com.tvr.easynote;
+package com.tvr.easynote.features.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,15 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.tvr.easynote.R;
+import com.tvr.easynote.database.AppDatabase;
+import com.tvr.easynote.database.Notes;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.observers.DisposableMaybeObserver;
+import io.reactivex.schedulers.Schedulers;
 
 public class GetStartActivity extends AppCompatActivity {
 

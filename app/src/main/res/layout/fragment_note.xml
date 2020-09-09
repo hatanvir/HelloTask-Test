@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F2F2F2"
-    tools:context=".bottom_nav_fragment.NoteFragment">
+    tools:context=".features.view.bottom_nav_fragment.NoteFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -83,6 +83,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

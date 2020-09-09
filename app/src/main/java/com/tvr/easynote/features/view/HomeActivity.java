@@ -1,4 +1,4 @@
-package com.tvr.easynote;
+package com.tvr.easynote.features.view;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -10,10 +10,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.tvr.easynote.bottom_nav_fragment.CalendarFragment;
-import com.tvr.easynote.bottom_nav_fragment.FavoriteFragment;
-import com.tvr.easynote.bottom_nav_fragment.NoteFragment;
-import com.tvr.easynote.bottom_nav_fragment.SettingsFragment;
+import com.tvr.easynote.R;
+import com.tvr.easynote.features.view.bottom_nav_fragment.CalendarFragment;
+import com.tvr.easynote.features.view.bottom_nav_fragment.FavoriteFragment;
+import com.tvr.easynote.features.view.bottom_nav_fragment.NoteFragment;
+import com.tvr.easynote.features.view.bottom_nav_fragment.SettingsFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

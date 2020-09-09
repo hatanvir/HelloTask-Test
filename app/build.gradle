@@ -46,4 +46,20 @@ dependencies {
     annotationProcessor "android.arch.persistence.room:compiler:27.0.2"
     testImplementation "android.arch.persistence.room:testing:27.0.2"
 
+    //butterknife
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    //rxJava
+    implementation "io.reactivex.rxjava2:rxjava:2.1.6"
+    implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
+
+    implementation "androidx.room:room-rxjava2:2.2.5"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+
+    //floatingMenu
+    implementation 'com.github.clans:fab:1.6.4'
+
 }

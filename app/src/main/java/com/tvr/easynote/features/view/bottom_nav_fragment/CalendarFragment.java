@@ -1,4 +1,4 @@
-package com.tvr.easynote.bottom_nav_fragment;
+package com.tvr.easynote.features.view.bottom_nav_fragment;
 
 import android.os.Bundle;
 

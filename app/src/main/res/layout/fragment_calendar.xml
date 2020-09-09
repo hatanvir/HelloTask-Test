@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F2F2F2"
     android:fillViewport="true"
-    tools:context=".bottom_nav_fragment.CalendarFragment">
+    tools:context=".features.view.bottom_nav_fragment.CalendarFragment">
 
    <androidx.constraintlayout.widget.ConstraintLayout
        android:layout_width="match_parent"
