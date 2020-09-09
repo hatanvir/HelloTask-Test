@@ -23,6 +23,6 @@
     <item
         android:title="Settings"
         android:icon="@drawable/ic_iconly_light_setting"
-        android:id="@+id/Settings"
+        android:id="@+id/settings"
         />
 </menu>
