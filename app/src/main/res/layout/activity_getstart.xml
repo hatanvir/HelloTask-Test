@@ -25,6 +25,8 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:text="Get Started"
+        android:background="@drawable/button_background"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

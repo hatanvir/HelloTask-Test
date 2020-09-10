@@ -23,6 +23,9 @@ import com.tvr.easynote.features.model.NoteModelImplementation;
 import com.tvr.easynote.features.view.NoteCreateAndUpdateActivity;
 import com.tvr.easynote.features.viewmodel.NotesViewModel;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import butterknife.BindView;
@@ -68,7 +71,7 @@ public class NoteFragment extends Fragment {
         viewModel.getNoteSuccess.observe(this, new Observer() {
             @Override
             public void onChanged(Object o) {
-                notesRv.setAdapter(new NoteListRecyclerviewAdapter(getActivity(),((List<Notes>) o)));
+                notesRv.setAdapter(new NoteListRecyclerviewAdapter(getActivity(), ((List<Notes>) o)));
             }
         });
         viewModel.getNoteFailed.observe(this, new Observer() {

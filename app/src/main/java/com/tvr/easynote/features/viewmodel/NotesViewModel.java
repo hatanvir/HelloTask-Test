@@ -95,4 +95,21 @@ public class NotesViewModel extends ViewModel {
             }
         });
     }
+
+    public MutableLiveData getFavSuccess = new MutableLiveData<List<Notes>>();
+    public MutableLiveData getFavFailed = new MutableLiveData<String>();
+
+    public void getFavNotes(NoteModel model){
+        model.getFavNotes(new RequestCompleteListener<List<FavoriteNotes>>() {
+            @Override
+            public void OnSuccessListener(List<FavoriteNotes> data) {
+                getFavSuccess.postValue(data);
+            }
+
+            @Override
+            public void OnFailedListener(String error) {
+                getFavFailed.postValue(error);
+            }
+        });
+    }
 }

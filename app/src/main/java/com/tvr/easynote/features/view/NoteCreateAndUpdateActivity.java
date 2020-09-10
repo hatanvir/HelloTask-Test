@@ -42,6 +42,7 @@ public class NoteCreateAndUpdateActivity extends AppCompatActivity {
 
     NoteModel model;
     NotesViewModel viewModel;
+
     @BindView(R.id.saveFab)
     FloatingActionButton saveFab;
     @BindView(R.id.favoriteIm)
@@ -113,7 +114,19 @@ public class NoteCreateAndUpdateActivity extends AppCompatActivity {
                 viewModel.addToFavSuccess.observe(NoteCreateAndUpdateActivity.this, new Observer() {
                     @Override
                     public void onChanged(Object o) {
-                        Toast.makeText(NoteCreateAndUpdateActivity.this, "Note added to favorite", Toast.LENGTH_SHORT).show();
+                        viewModel.addToFavSuccess.observe(NoteCreateAndUpdateActivity.this, new Observer() {
+                            @Override
+                            public void onChanged(Object o) {
+                                Toast.makeText(NoteCreateAndUpdateActivity.this, "Added to favorite", Toast.LENGTH_SHORT).show();
+
+                            }
+                        });
+                        viewModel.addToFavFailed.observe(NoteCreateAndUpdateActivity.this, new Observer() {
+                            @Override
+                            public void onChanged(Object o) {
+                                Toast.makeText(NoteCreateAndUpdateActivity.this, "Failed to add favorite", Toast.LENGTH_SHORT).show();
+                            }
+                        });
                     }
                 });
 
@@ -190,6 +203,27 @@ public class NoteCreateAndUpdateActivity extends AppCompatActivity {
             descriptionEt.setText(notes.getDes());
 
             titleEt.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable editable) {
+                    if(!titleEt.getText().toString().equals(title) || !descriptionEt.getText().toString().equals(des)){
+                        saveFab.setVisibility(View.VISIBLE);
+                    }else {
+                        saveFab.setVisibility(View.GONE);
+                    }
+                }
+            });
+
+            descriptionEt.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
